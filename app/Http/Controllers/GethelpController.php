@@ -2,17 +2,19 @@
 
 namespace App\Http\Controllers;
 
-class BookController extends Controller
-{
+use App\Models\Gethelp;
+
+
+class GethelpController extends Controller {
     /**
      * Create a new controller instance.
      *
      * @return void
      */
-    public function __construct()
-    {
-        //
-    }
 
-    //
+
+
+ 
+
 }
+
