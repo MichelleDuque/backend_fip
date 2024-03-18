@@ -13,6 +13,18 @@ class VolunteerController extends Controller {
      */
 
 
+    public function getAll(){
+        $volunteers = Volunteer::all();
+        return response()->json($volunteers);
+    }
+
+    public function getOne($id){
+
+        $volunteer = Volunteer::find($id);
+        return response()->json($volunteer);
+    }
+
+
 
  
 

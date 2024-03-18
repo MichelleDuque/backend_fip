@@ -12,6 +12,17 @@ class EventController extends Controller {
      * @return void
      */
 
+    public function getAll(){
+        $events = Event::all();
+        return response()->json($events);
+    }
+
+    public function getOne($id){
+
+        $event = Event::find($id);
+        return response()->json($event);
+    }
+
 
 
  

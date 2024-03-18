@@ -12,6 +12,17 @@ class ContactController extends Controller {
      * @return void
      */
 
+    public function getAll(){
+        $contacts = Contact::all();
+        return response()->json($contacts);
+    }
+
+    public function getOne($id){
+
+        $contact = Contact::find($id);
+        return response()->json($contact);
+    }
+
 
 
  
