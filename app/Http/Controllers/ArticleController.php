@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Type;
+use App\Models\Article;
 
 
-class TypeController extends Controller {
+class ArticleController extends Controller {
     /**
      * Create a new controller instance.
      *

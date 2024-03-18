@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Position;
+use App\Models\Donation;
 
 
-class PositionController extends Controller {
+class DonationController extends Controller {
     /**
      * Create a new controller instance.
      *

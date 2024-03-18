@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Collaborators;
+use App\Models\Event;
 
 
-class CollaboratorsController extends Controller {
+class EventController extends Controller {
     /**
      * Create a new controller instance.
      *

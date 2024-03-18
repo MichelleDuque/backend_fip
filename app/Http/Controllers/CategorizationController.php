@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Role;
+use App\Models\Categorization;
 
 
-class RoleController extends Controller {
+class CategorizationController extends Controller {
     /**
      * Create a new controller instance.
      *
