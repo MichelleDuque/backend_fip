@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Collaborators;
+use App\Models\Collaborator;
 
 
 class CollaboratorController extends Controller {
@@ -11,6 +11,18 @@ class CollaboratorController extends Controller {
      *
      * @return void
      */
+
+
+    public function getAll(){
+        $collaborators = Collaborator::all();
+        return response()->json($collaborators);
+    }
+
+    public function getOne($id){
+
+        $collaborator = Collaborator::find($id);
+        return response()->json($collaborator);
+    }
 
 
 

@@ -12,6 +12,17 @@ class DonationController extends Controller {
      * @return void
      */
 
+    public function getAll(){
+        $donations = Donation::all();
+        return response()->json($donations);
+    }
+
+    public function getOne($id){
+
+        $donation = Donation::find($id);
+        return response()->json($donation);
+    }
+
 
 
  

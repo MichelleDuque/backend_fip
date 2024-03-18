@@ -12,6 +12,16 @@ class GethelpController extends Controller {
      * @return void
      */
 
+    public function getAll(){
+        $gethelps = Gethelp::all();
+        return response()->json($gethelps);
+    }
+
+    public function getOne($id){
+
+        $gethelp = Gethelp::find($id);
+        return response()->json($gethelp);
+    }
 
 
  
