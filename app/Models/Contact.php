@@ -11,7 +11,7 @@ class Contact extends Model
      *
      * @var array
      */
-    protected $fillable = ["firstname", "lastname", "email", "phone", "subject", "textinput"];
+    protected $fillable = ["name", "email", "subject", "textinput"];
 
     /**
      * The attributes excluded from the model's JSON form.

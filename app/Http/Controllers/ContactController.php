@@ -28,10 +28,8 @@ class ContactController extends Controller {
     
     public function save(Request $request) {
         $this->validate($request, [
-            'firstname' => 'required',
-            'lastname' => 'required',
+            'name' => 'required',
             'email' => 'required',
-            'phone' => 'required',
             'subject' => 'required',
             'textinput' => 'required'
         ]);
@@ -43,10 +41,8 @@ class ContactController extends Controller {
         $contact = Contact::findOrFail($id);
     
         $this->validate($request, [
-            'firstname' => 'required',
-            'lastname' => 'required',
+            'name' => 'required',
             'email' => 'required',
-            'phone' => 'required',
             'subject' => 'required',
             'textinput' => 'required'
         ]);
