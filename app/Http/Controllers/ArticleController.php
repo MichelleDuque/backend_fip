@@ -20,7 +20,7 @@ class ArticleController extends Controller {
     }
 
     public function getAllArticleAuthor(){
-        $articles = Article::join("authors", "articles.author", "=", "authors.id")-> select("articles.id", "title", "text", "first_name", "last_name", "about")->get();
+        $articles = Article::join("authors", "articles.author", "=", "authors.id")-> select("articles.id", "title", "text", "first_name", "last_name", "about", "attention_phrase", "image")->get();
          return response()->json($articles);
     }
 
@@ -39,7 +39,9 @@ class ArticleController extends Controller {
         $this->validate($request, [
             'title' => 'required',
             'text' => 'required',
-            'author' => 'required'
+            'author' => 'required',
+            'image' => 'required',
+            'attention_phrase' => 'required'
         ]);
         $article = Article::create($request->all());
         return response()->json($article, 201);
@@ -51,7 +53,9 @@ class ArticleController extends Controller {
         $this->validate($request, [
             'title' => 'required',
             'text' => 'required',
-            'author' => 'required'
+            'author' => 'required',
+            'image' => 'required',
+            'attention_phrase' => 'required'
         ]);
         $article->update($request->all());
         return response()->json($article);
