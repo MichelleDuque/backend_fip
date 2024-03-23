@@ -11,7 +11,7 @@ class Gethelp extends Model
      *
      * @var array
      */
-    protected $fillable = ["firstname", "lastname", "email", "phone", "subject", "message", "date"];
+    protected $fillable = ["name", "email", "subject", "message"];
 
     /**
      * The attributes excluded from the model's JSON form.
