@@ -86,4 +86,9 @@ $router->delete('/volunteers/delete/{id}', 'VolunteerController@delete');
 $router->get("/articles_categorizations", "Articles_categorizationController@getAll");
 $router->get("/articles_categorizations/{id}", "Articles_categorizationController@getOne");
 
+//Roles
+$router->get("/roles", "RoleController@getAll");
+$router->get("/roles/{id}", "RoleController@getOne");
+
+
 
