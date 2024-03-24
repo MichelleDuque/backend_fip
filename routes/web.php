@@ -90,5 +90,9 @@ $router->get("/articles_categorizations/{id}", "Articles_categorizationControlle
 $router->get("/roles", "RoleController@getAll");
 $router->get("/roles/{id}", "RoleController@getOne");
 
+//Types
+$router->get("/types", "TypeController@getAll");
+$router->get("/types/{id}", "TypeController@getOne");
+
 
 
