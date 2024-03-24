@@ -16,7 +16,7 @@ class VolunteerController extends Controller {
 
 
      public function getAll() {
-        $volunteers = Volunteer::join("roles", "volunteers.role", "=", "roles.id")-> select("volunteers.id", "firstname", "lastname", "email", "phone", "textinput", "notes", "name")->get();
+        $volunteers = Volunteer::join("roles", "volunteers.role", "=", "roles.id")-> select("volunteers.id", "firstname", "lastname", "email", "phone", "notes", "name")->get();
         return response()->json($volunteers);
     }
 
@@ -31,8 +31,6 @@ class VolunteerController extends Controller {
             'lastname' => 'required',
             'email' => 'required',
             'phone' => 'required',
-            'textinput' => 'required',
-            'notes' => 'required',
             'role' => 'required'
         ]);
         $volunteer = Volunteer::create($request->all());
@@ -49,8 +47,6 @@ class VolunteerController extends Controller {
             'lastname' => 'required',
             'email' => 'required',
             'phone' => 'required',
-            'textinput' => 'required',
-            'notes' => 'required',
             'role' => 'required'
         ]);
         $volunteer->update($request->all());
