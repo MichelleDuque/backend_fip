@@ -16,7 +16,7 @@ class DonationController extends Controller {
      */
 
     public function getAll(){
-        $donations = Donation::join("types", "donations.type", "=", "types.id")-> select("donations.id", "firstname", "lastname", "email", "amount", "title", "date")->orderBy("date")->get();
+        $donations = Donation::join("types", "donations.type", "=", "types.id")-> select("donations.id", "firstname", "lastname", "email", "amount", "title")->get();
         return response()->json($donations);
     }
 
@@ -35,7 +35,6 @@ class DonationController extends Controller {
             'email' => 'required',
             'amount' => 'required',
             'type' => 'required',
-            'date' => 'required|date'
         ]);
         $donation = Donation::create($request->all());
         return response()->json($donation, 201);
@@ -51,7 +50,6 @@ class DonationController extends Controller {
             'email' => 'required',
             'amount' => 'required',
             'type' => 'required',
-            'date' => 'required|date'
         ]);
         $donation->update($request->all());
         return response()->json($donation);
