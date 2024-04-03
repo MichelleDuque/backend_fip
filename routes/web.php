@@ -82,6 +82,14 @@ $router->post("/volunteers/add", "VolunteerController@save");
 $router->post('/volunteers/edit/{id}', 'VolunteerController@update');
 $router->delete('/volunteers/delete/{id}', 'VolunteerController@delete');
 
+//Newsletter
+$router->get("/newsletter", "NewsletterController@getAll");
+$router->get("/newsletter/{id}", "NewsletterController@getOne");
+$router->post("/newsletter/add", "NewsletterController@save");
+$router->post('/newsletter/edit/{id}', 'NewsletterController@update');
+$router->delete('/newsletter/delete/{id}', 'NewsletterController@delete');
+
+
 //Articles_categorization
 $router->get("/articles_categorizations", "Articles_categorizationController@getAll");
 $router->get("/articles_categorizations/{id}", "Articles_categorizationController@getOne");
